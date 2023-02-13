@@ -1,0 +1,54 @@
+{
+  "name": "site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tsc-files": "tsc-files --noEmit",
+    "lint": "eslint --fix --ext .ts,tsx .",
+    "prettier": "prettier -u -w \"*.{ts,tsx,css,html}\"",
+    "test": "vitest run",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "pnpm run tsc-files",
+      "pnpm run lint",
+      "pnpm run prettier",
+      "pnpm run test"
+    ],
+    "*.{html,css,js,json,md}": [
+      "pnpm run prettier"
+    ]
+  },
+  "dependencies": {
+    "preact": "^10.11.3"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.5.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.34.0",
+    "eslint-config-preact": "^1.3.0",
+    "eslint-config-prettier": "^8.6.0",
+    "happy-dom": "^8.2.6",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.1",
+    "prettier": "^2.8.4",
+    "tsc-files": "^1.1.3",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vite-plugin-checker": "^0.5.5",
+    "vitest": "^0.27.3"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/core"
+      ]
+    }
+  }
+}
