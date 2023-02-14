@@ -7,18 +7,20 @@
     "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "tsc-files": "tsc-files --noEmit",
+    "tsc": "tsc --noEmit",
+    "tsc:husky": "tsc-files --noEmit",
     "lint": "eslint --fix --ext .ts,tsx .",
     "prettier": "prettier -u -w \"*.{ts,tsx,css,html}\"",
     "test": "vitest run",
+    "test:husky": "vitest related",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "pnpm run tsc-files",
+      "pnpm run tsc:husky",
       "pnpm run lint",
       "pnpm run prettier",
-      "pnpm run test"
+      "pnpm run test:husky"
     ],
     "*.{html,css,js,json,md}": [
       "pnpm run prettier"
@@ -37,11 +39,14 @@
     "happy-dom": "^8.2.6",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.1",
+    "postcss": "^8",
     "prettier": "^2.8.4",
+    "sass": "^1.58.1",
     "tsc-files": "^1.1.3",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vite-plugin-checker": "^0.5.5",
+    "vite-plugin-sass-dts": "^1.2.15",
     "vitest": "^0.27.3"
   },
   "pnpm": {

@@ -2,14 +2,16 @@
 import { defineConfig } from "vite";
 import preact from "@preact/preset-vite";
 import checker from "vite-plugin-checker";
+import sassDts from "vite-plugin-sass-dts";
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: "/vite-preact-template/",
   define: {
     "import.meta.vitest": "undefined",
   },
   plugins: [
     preact(),
+    sassDts(),
     checker({
       typescript: true,
     }),
