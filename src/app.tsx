@@ -1,4 +1,7 @@
 import { useState } from "preact/hooks";
+import cn from "classnames";
+
+import viteLogo from "./assets/vite.svg";
 import preactLogo from "./assets/preact.svg";
 import styles from "./app.module.scss";
 
@@ -9,12 +12,12 @@ export function App() {
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" class={styles.logo} alt="Vite logo" />
+          <img src={viteLogo} class={styles.logo} alt="Vite logo" />
         </a>
         <a href="https://preactjs.com" target="_blank" rel="noreferrer">
           <img
             src={preactLogo}
-            class={`${styles.logo} ${styles.preact}`}
+            class={cn(styles.logo, styles.preact)}
             alt="Preact logo"
           />
         </a>
