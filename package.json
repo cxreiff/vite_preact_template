@@ -1,8 +1,12 @@
 {
-  "name": "site",
+  "name": "vite-preact-template",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cxreiff/vite-preact-template.git"
+  },
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",

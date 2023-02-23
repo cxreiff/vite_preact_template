@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks";
+import { useState } from "react";
 import cn from "classnames";
 
 import viteLogo from "./assets/vite.svg";
