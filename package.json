@@ -14,7 +14,7 @@
     "tsc": "tsc --noEmit",
     "tsc:husky": "tsc-files --noEmit",
     "lint": "eslint --fix --ext .ts,tsx .",
-    "prettier": "prettier -u -w \"*.{ts,tsx,css,html}\"",
+    "prettier": "prettier -u -w \"*.{ts,tsx,css,html,md}\"",
     "test": "vitest run",
     "test:husky": "vitest related",
     "prepare": "husky install"

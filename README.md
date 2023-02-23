@@ -1,1 +1,3 @@
 # vite-preact-template
+
+Template for creating a web app using vite, vitest, and preact.
