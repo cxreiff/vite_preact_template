@@ -5,7 +5,7 @@ import checker from "vite-plugin-checker";
 import sassDts from "vite-plugin-sass-dts";
 
 export default defineConfig({
-  base: "/vite-preact-template/",
+  base: "/vite_preact_template/",
   define: {
     "import.meta.vitest": "undefined",
   },
